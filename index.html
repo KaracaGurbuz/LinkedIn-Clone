@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>LinkedIn</title>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <div class="navs">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"
+              ><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnjk7cOdCg9Ks3FkS8RMPQeNOKh_VveGs4mkBAX10PhbB9S8kfy3_Gw_In62y6740O69c&usqp=CAU"
+                alt=""
+                style="width: 40px; height: 40px; border-radius: 5px"
+            /></a>
+            <form
+              class="d-flex justify-content-center align-items-center search-bar"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                class="form-control me-2 bar"
+                type="search"
+                placeholder="Arama Yap"
+                aria-label="Search"
+              />
+            </form>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <p><small>Ana Sayfa</small></p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="fa-solid fa-user-group"></i>
+                    <p><small>Ağım</small></p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <p><small>iş İlanları</small></p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="fa-solid fa-comment-dots"></i>
+                    <p><small>Mesajlaşma</small></p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="fa-solid fa-bell"></i>
+                    <p><small>Bildirimler</small></p>
+                  </a>
+                </li>
+                <li class="nav-item dropdown border-end me-5">
+                  <img
+                    src="data:image/jpeg;base64,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"
+                    style="width: 26px; height: 26px; border-radius: 50%"
+                    alt=""
+                  />
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Ben
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <i class="fa-solid fa-align-justify"></i>
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    İş
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">
+                    <p>
+                      <small class="text-warning"
+                        >Premium'u ücretsiz <br />deneyin</small
+                      >
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+    <div class="main">
+      <!-- Container Start -->
+      <div class="container">
+        <div class="row">
+          <!-- Left-Side Start -->
+          <aside class="col-sm-3 right-side mt-5 p-2 ">
+            <div class="card ">
+              <div class="text-center mt-3">
+                <img
+                  src="https://i4.hurimg.com/i/hurriyet/75/866x494/5fd5f917c03c0e1140318d44.jpg"
+                  class="card-img-top"
+                  alt="Kıvanç"
+                  style="width: 80px; height: 80px; border-radius: 50%"
+                />
+              </div>
+
+              <div class="card-body ">
+                <h5 class="card-title text-center">Kıvanç Tatlıtuğ</h5>
+                <p class="card-text text-center">Turkish Actor</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <p class="text-muted">
+                    bağlantı
+                    <span class="badge bg-primary float-end">500+</span>
+                  </p>
+                  <p><strong>İletişim ağınızı büyütün</strong></p>
+                  <p class="text-muted">
+                    <small>Profilinizi kimler görüntüledi</small>
+                    <span class="badge bg-primary float-end">78+</span>
+                  </p>
+                </li>
+                <li class="list-group-item">
+                  <p class="text-muted">Özel araç ve içgörülere erişin</p>
+                  <p>
+                    <i class="fa-solid fa-ticket-simple text-warning me-1"></i>
+                    <strong><small>Premium'u ücretsiz deneyin</small> </strong>
+                  </p>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa-solid fa-bookmark me-2"></i
+                  ><strong>Öğelerim</strong>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          <!-- Left-Side End -->
+          <!-- Main Start -->
+          <main class="col-sm-5 mt-5 p-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <section class="d-flex">
+                  <img
+                    src="https://i4.hurimg.com/i/hurriyet/75/866x494/5fd5f917c03c0e1140318d44.jpg"
+                    class="card-img-top me-3"
+                    alt="Kıvanç"
+                    style="width: 50px; height: 50px; border-radius: 50%"
+                  />
+
+                  <input
+                    class="form-control rounded-pill float-end"
+                    type="search"
+                    placeholder="Gönderi hazırla"
+                    aria-label="Search"
+                  />
+                </section>
+                <section class="d-flex mt-3 justify-content-between">
+                  <div>
+                    <span class="me-1"><i class="fa-solid fa-image"></i></span>
+                    <span>Fotoğraf</span>
+                  </div>
+                  <div>
+                    <span class="me-1"
+                      ><i class="fa-brands fa-youtube"></i
+                    ></span>
+                    <span>Video</span>
+                  </div>
+                  <div>
+                    <span class="me-1"
+                      ><i class="fa-solid fa-briefcase"></i
+                    ></span>
+                    <span>İş İlanı</span>
+                  </div>
+                  <div>
+                    <span class="me-1"
+                      ><i class="fa-solid fa-file-lines"></i
+                    ></span>
+                    <span>Yazı yaz</span>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div class="card mt-3 " >
+              <div class="card-header">
+                <section class="d-flex">
+                  <img
+                    src="https://i4.hurimg.com/i/hurriyet/75/750x422/5ff1877067b0a90a18dc860a.gif"
+                    class="card-img-top me-3"
+                    alt="Kıvanç"
+                    style="width: 25px; height: 25px; border-radius: 50%"
+                  />
+
+                  <p><strong>Hayko Cepkin</strong> <span class="text-muted">bunu beğendi</span> </p>
+              </div>
+              <div class="card-body">
+                <div class="d-flex">
+                  <img
+                    src="https://i.medyafaresi.com/files/2020/6/17/942858/unlu-oyuncu-matthew-perry-sosyal-medyayi-birbirine-katti_iQoO.jpg"
+                    class="card-img-top me-3"
+                    alt="Kıvanç"
+                    style="width: 50px; height: 50px; border-radius: 50%"
+                  />
+
+                  <p><strong>Matt Stephenson</strong> <span class="text-muted"> 3.+</span> </p>
+                  <span class="ms-auto"><i class="fa-solid fa-plus"></i> <span class="text-primary">Takip Et</span> </span>
+                  
+                </div>
+                <div>
+                  <p>Take the PTO.</p>
+                  <br>
+                  <p>That's it. That's the post.</p>
+                  <br>
+                  <p class="text-info">Çeviriyi gör</p>
+                </div>
+                <div>
+                  <img src="https://images.unsplash.com/photo-1648020406912-7c19fbaa8b9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="" style="width: 100%; height: 600px;">
+                </div>
+                <div class="d-flex">
+                  <section>
+                    <p> <small><i class="fa-solid fa-thumbs-up me-1 text-success"></i><i class="fa-regular fa-heart me-1 text-danger"></i><i class="fa-solid fa-hands me-2 text-warning"></i><span class="text-muted ">Halil Söylemez ve 159.654 diğer kişi</span></small></p>
+                  </section>
+                  <section class="ms-auto">
+                    <small><p class="text-muted ">1.691 yorum 1.368 paylaşım</p></small> 
+                  </section>
+                 
+                </div>
+                <div class="d-flex mt-3 justify-content-between border-top">
+                  <div class="mt-3">
+                    <span class="me-1"><i class="fa-regular fa-thumbs-up fa-2x"></i></span>
+                    <span class="text-muted fs-5">Beğen</span>
+                  </div>
+                  <div class="mt-3">
+                    <span class="me-1">
+                    <i class="fa-regular fa-comment-dots fa-2x "></i></span>
+                    <span class="text-muted fs-5">Yorum Yap</span>
+                  </div>
+                  <div class="mt-3">
+                    <span class="me-1"
+                      ><i class="fa-solid fa-share fa-2x"></i></span>
+                    <span class="text-muted fs-5">Paylaş</span>
+                  </div>
+                  <div class="mt-3">
+                    <span class="me-1"
+                      ><i class="fa-solid fa-paper-plane fa-2x"></i></span>
+                    <span class=" text-muted fs-5">Gönder</span>
+                  </div>
+                </div>
+              </div>
+
+                  
+                  
+             
+            </div>
+            <div class="card mt-3 " >
+              <div class="card-header">
+                <section class="d-flex">
+                  <img
+                    src="https://i4.hurimg.com/i/hurriyet/75/750x422/5ff1877067b0a90a18dc860a.gif"
+                    class="card-img-top me-3"
+                    alt="Kıvanç"
+                    style="width: 25px; height: 25px; border-radius: 50%"
+                  />
+
+                  <p><strong>Hayko Cepkin</strong> <span class="text-muted">bunu beğendi</span> </p>
+              </div>
+              <div class="card-body">
+                <div class="d-flex">
+                  <img
+                    src="https://i.medyafaresi.com/files/2020/6/17/942858/unlu-oyuncu-matthew-perry-sosyal-medyayi-birbirine-katti_iQoO.jpg"
+                    class="card-img-top me-3"
+                    alt="Kıvanç"
+                    style="width: 50px; height: 50px; border-radius: 50%"
+                  />
+
+                  <p><strong>Matt Stephenson</strong> <span class="text-muted"> 3.+</span> </p>
+                  <span class="ms-auto"><i class="fa-solid fa-plus"></i> <span class="text-primary">Takip Et</span> </span>
+                  
+                </div>
+                <div>
+                  <p>Take the PTO.</p>
+                  <br>
+                  <p>That's it. That's the post.</p>
+                  <br>
+                  <p class="text-info">Çeviriyi gör</p>
+                </div>
+                <div>
+                  <img src="https://images.unsplash.com/photo-1647954250812-d2d0fbd8ca00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzOHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="" style="width: 100%; height: 600px;">
+                </div>
+                <div class="d-flex">
+                  <section>
+                    <p> <small><i class="fa-solid fa-thumbs-up me-1 text-success"></i><i class="fa-regular fa-heart me-1 text-danger"></i><i class="fa-solid fa-hands me-2 text-warning"></i><span class="text-muted ">Halil Söylemez ve 159.654 diğer kişi</span></small></p>
+                  </section>
+                  <section class="ms-auto">
+                    <small><p class="text-muted ">1.691 yorum 1.368 paylaşım</p></small> 
+                  </section>
+                 
+                </div>
+                <div class="d-flex mt-3 justify-content-between border-top">
+                  <div class="mt-3">
+                    <span class="me-1"><i class="fa-regular fa-thumbs-up fa-2x"></i></span>
+                    <span class="text-muted fs-5">Beğen</span>
+                  </div>
+                  <div class="mt-3">
+                    <span class="me-1">
+                    <i class="fa-regular fa-comment-dots fa-2x "></i></span>
+                    <span class="text-muted fs-5">Yorum Yap</span>
+                  </div>
+                  <div class="mt-3">
+                    <span class="me-1"
+                      ><i class="fa-solid fa-share fa-2x"></i></span>
+                    <span class="text-muted fs-5">Paylaş</span>
+                  </div>
+                  <div class="mt-3">
+                    <span class="me-1"
+                      ><i class="fa-solid fa-paper-plane fa-2x"></i></span>
+                    <span class=" text-muted fs-5">Gönder</span>
+                  </div>
+                </div>
+              </div>
+
+                  
+                  
+             
+            </div>
+            <div class="card mt-3 " >
+              <div class="card-header">
+                <section class="d-flex">
+                  <img
+                    src="https://i4.hurimg.com/i/hurriyet/75/750x422/5ff1877067b0a90a18dc860a.gif"
+                    class="card-img-top me-3"
+                    alt="Kıvanç"
+                    style="width: 25px; height: 25px; border-radius: 50%"
+                  />
+
+                  <p><strong>Hayko Cepkin</strong> <span class="text-muted">bunu beğendi</span> </p>
+              </div>
+              <div class="card-body">
+                <div class="d-flex">
+                  <img
+                    src="https://i.medyafaresi.com/files/2020/6/17/942858/unlu-oyuncu-matthew-perry-sosyal-medyayi-birbirine-katti_iQoO.jpg"
+                    class="card-img-top me-3"
+                    alt="Kıvanç"
+                    style="width: 50px; height: 50px; border-radius: 50%"
+                  />
+
+                  <p><strong>Matt Stephenson</strong> <span class="text-muted"> 3.+</span> </p>
+                  <span class="ms-auto"><i class="fa-solid fa-plus"></i> <span class="text-primary">Takip Et</span> </span>
+                  
+                </div>
+                <div>
+                  <p>Take the PTO.</p>
+                  <br>
+                  <p>That's it. That's the post.</p>
+                  <br>
+                  <p class="text-info">Çeviriyi gör</p>
+                </div>
+                <div>
+                  <img src="https://images.unsplash.com/photo-1640622304293-ec9c89c6bac9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw1NXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="" style="width: 100%; height: 600px;">
+                </div>
+                <div class="d-flex">
+                  <section>
+                    <p> <small><i class="fa-solid fa-thumbs-up me-1 text-success"></i><i class="fa-regular fa-heart me-1 text-danger"></i><i class="fa-solid fa-hands me-2 text-warning"></i><span class="text-muted ">Halil Söylemez ve 159.654 diğer kişi</span></small></p>
+                  </section>
+                  <section class="ms-auto">
+                    <small><p class="text-muted ">1.691 yorum 1.368 paylaşım</p></small> 
+                  </section>
+                 
+                </div>
+                <div class="d-flex mt-3 justify-content-between border-top">
+                  <div class="mt-3">
+                    <span class="me-1"><i class="fa-regular fa-thumbs-up fa-2x"></i></span>
+                    <span class="text-muted fs-5">Beğen</span>
+                  </div>
+                  <div class="mt-3">
+                    <span class="me-1">
+                    <i class="fa-regular fa-comment-dots fa-2x "></i></span>
+                    <span class="text-muted fs-5">Yorum Yap</span>
+                  </div>
+                  <div class="mt-3">
+                    <span class="me-1"
+                      ><i class="fa-solid fa-share fa-2x"></i></span>
+                    <span class="text-muted fs-5">Paylaş</span>
+                  </div>
+                  <div class="mt-3">
+                    <span class="me-1"
+                      ><i class="fa-solid fa-paper-plane fa-2x"></i></span>
+                    <span class=" text-muted fs-5">Gönder</span>
+                  </div>
+                </div>
+              </div>
+
+                  
+                  
+             
+            </div>
+          </main>
+          <!-- Main End -->
+          <!--Right-Side Start -->
+          <section class="col-sm-4 mt-5 p-2">
+            <div class="card">
+              <div class="card-body">
+                <div>
+                  <h6>Akışınıza ekleyin <span class="float-end"> <small><i class="fa-solid fa-info"></i></small></span></h6> 
+                </div>
+                <div class="row mt-3">
+                  <div class="col-2 text-center">
+                    <img src="https://i4.hurimg.com/i/hurriyet/75/750x422/6188c75b4e3fe10c08ab0ebe.jpg" alt="" style="width: 50px; height: 50px; border-radius: 50%; text-align: center;">
+
+                  </div>
+                  <div class="col-10 ">
+                    <p class="p-0 m-0 "><strong>Dr.Sertaç Öztürk </strong></p>
+                    <p class="text-muted p-0 m-0"><small>Teknoloji iletişimcisi</small></p>
+                    <a href="#" class="btn btn-outline-secondary  rounded-pill">+ Takip Et</a>
+
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-2 text-center">
+                    <img src="https://i4.hurimg.com/i/hurriyet/75/750x422/619a12874e3fe0162c99c870.jpg" alt="" style="width: 50px; height: 50px; border-radius: 50%; text-align: center;">
+
+                  </div>
+                  <div class="col-10 ">
+                    <p class="p-0 m-0 "><strong>Okan Bayülgen </strong></p>
+                    <p class="text-muted p-0 m-0"><small>Komedyen</small></p>
+                    <a href="#" class="btn btn-outline-secondary  rounded-pill">+ Takip Et</a>
+
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-2 text-center">
+                    <img src="https://galeri13.uludagsozluk.com/711/aslan-akbey_1259342.jpg" alt="" style="width: 50px; height: 50px; border-radius: 50%; text-align: center;">
+
+                  </div>
+                  <div class="col-10 ">
+                    <p class="p-0 m-0 "><strong>Atakan Şensoy </strong></p>
+                    <p class="text-muted p-0 m-0"><small>Fabrika işcisi</small></p>
+                    <a href="#" class="btn btn-outline-secondary  rounded-pill">+ Takip Et</a>
+
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <p class="text-muted">Tüm tavsiyeleri görüntüle --> </p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-3 mx-4 "> 
+              <a href="#" class="text-muted p-1 ">Hakkında</a>
+              <a href="#" class="text-muted p-1">Erişilebilirlik</a>
+              <a href="#" class="text-muted p-1">Yardım Merkezi</a>
+              <a href="#" class="text-muted p-2">Gizlilik ve Koşullar </a>
+              <a href="#" class="text-muted p-2">Reklam Tercihleri</a>
+              <a href="#" class="text-muted p-2">Reklam</a>
+              <a href="#" class="text-muted p-2">Ticari Hizmetler</a>
+              <a href="#" class="text-muted p-2">Daha Fazla</a>
+
+            </div>
+            <div class="text-center mt-3 ">
+              <p><i class="fa-brands fa-linkedin text-primary"></i> LinkedIn Corporation &copy; 2022</p>
+            </div>
+
+
+          </section><!-- Right-Side End -->
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Container End -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

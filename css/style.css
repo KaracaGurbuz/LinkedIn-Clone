@@ -1,0 +1,23 @@
+.search-bar {
+  background-color: #fff;
+  padding: 0px 10px;
+  background-color: rgb(238, 243, 248) !important;
+  border-radius: 5px;
+}
+.bar {
+  border: none;
+  outline: none;
+  background-color: rgb(238, 243, 248) !important;
+}
+.navs {
+  background-color: #fff;
+  height: 80px;
+}
+.nav-item {
+  text-align: center;
+  margin-right: 1rem;
+}
+
+.main {
+  background-color: rgb(243, 242, 239);
+}
