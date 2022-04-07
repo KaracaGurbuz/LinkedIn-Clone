@@ -1,3 +1,2 @@
 # LinkedIn-Clone
-linkedin-clone12.netlify.app
-...
+https://linkedin-clone12.netlify.app
